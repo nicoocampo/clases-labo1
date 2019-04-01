@@ -30,3 +30,11 @@ int buscarMinimo(int numeros[], int cantidadDeValores){
     }
     return min;
 }
+int buscarValor(int numeros[], int cantidadDeValores, int valor){
+    int i;
+    for(i=0;i<cantidadDeValores; i++){
+        if(numeros[i]==valor)
+            return i;
+    }
+    return -1;
+}
