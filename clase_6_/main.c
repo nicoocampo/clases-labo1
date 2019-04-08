@@ -12,7 +12,6 @@ int main()
     gets(palabra);//Escribe incluso los espacios
     printf("\n\n%s\n", palabra);
     printf("\nIngrese palabra: ");
-    fflush(stdin);
     scanf("%[^\n]", palabra);//Con esa mascara, contemplamos el espacio
     printf("\n\n%s\n", palabra);
     printf("\nIngrese palabra: ");
