@@ -38,3 +38,34 @@ int buscarValor(int numeros[], int cantidadDeValores, int valor){
     }
     return -1;
 }
+
+void ordenarVector(int numeros[],int len){
+    int i, j;
+    for(i=0; i<len-1; i++){
+        for(j=i+1; j<len; j++){
+            if(numeros[i]>numeros[j])
+                swapBubble(numeros,i,j);
+        }
+    }
+}
+
+void swapBubble(int numeros[], int i, int j){
+    int aux=numeros[i];
+    numeros[i]=numeros[j];
+    numeros[j]=aux;
+}
+
+int menu(){
+    int opcion;
+    system("cls");
+    do{
+        printf("1 - Ingresar valores array");
+        printf("\n2 - Mostrar valores del array");
+        printf("\n3 - Buscar valor en el array");
+        printf("\n4 - Ordenar array");
+        printf("\n\n5 - Salir");
+        printf("\n\nOpcion: ");
+        scanf("%d", &opcion);
+    }while (opcion<0 || opcion>5);
+    return opcion;
+}

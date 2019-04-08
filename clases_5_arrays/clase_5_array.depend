@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1554727889 source:c:\users\alumno\desktop\clase 6\clase 6\clase 6\clases_5_arrays\funciones.c
+	<stdio.h>
+	<stdlib.h>
+	"funciones.h"
+
+1554727872 c:\users\alumno\desktop\clase 6\clase 6\clase 6\clases_5_arrays\funciones.h
+
+1554727993 source:c:\users\alumno\desktop\clase 6\clase 6\clase 6\clases_5_arrays\main.c
+	<stdio.h>
+	<stdlib.h>
+	"funciones.h"
+
