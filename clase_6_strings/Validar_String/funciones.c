@@ -8,7 +8,7 @@ void pedirCadena(char mensaje[],char cadena[],int len){
     char auxCadena[100];
     printf("Ingrese %s", mensaje);
     gets(auxCadena);
-    validarCadena(mensaje, cadena, len);
+    validarCadena(mensaje, auxCadena, len);
     strcpy(cadena, auxCadena);
 }
 

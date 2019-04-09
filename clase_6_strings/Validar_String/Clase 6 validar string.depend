@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1554814325 source:c:\users\alumno\desktop\clase 7\clases-labo1\clase_6_strings\validar_string\main.c
+	<stdio.h>
+	<stdlib.h>
+	"funciones.h"
+
+1554814186 c:\users\alumno\desktop\clase 7\clases-labo1\clase_6_strings\validar_string\funciones.h
+
+1554815497 source:c:\users\alumno\desktop\clase 7\clases-labo1\clase_6_strings\validar_string\funciones.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"funciones.h"
+
