@@ -3,7 +3,7 @@
 #include <string.h>
 #include<ctype.h>
 #define MAX 20
-#define TAM 2
+#define TAM 6
 #include "funciones.h"
 #include "empleados.h"
 
@@ -13,11 +13,7 @@ void mostrarEstructura(eEmpleado aux[], int tam){
     int i;
     for(i=0;i<tam;i++){
         if(aux[i].legajo>-1){
-            printf("Legajo: %d", aux[i].legajo);
-            printf("\nNombre: %s", aux[i].nombre);
-            printf("\nsexo: %c", aux[i].sexo);
-            printf("\nSueldo neto: %.2f", aux[i].sueldoBruto);
-            printf("\nSueldo bruto: %.2f\n\n", aux[i].sueldoNeto);
+            mostrarEmpleado(aux,tam,i);
         }
     }
 }
@@ -88,12 +84,12 @@ int buscarPosicion(eEmpleado lista[], int tam, int posicion){
     return retorno;
 }
 
-void hardcodearDatosEmpleados(eEmpleado lista[], int tam){
+/*void hardcodearDatosEmpleados(eEmpleado lista[], int tam){
     int i;
     int legajos[]={1,8,9,7,2,4};
-    char nombres[][50]={"Maria","Pedro","Jose","Pedro","Pablo","Mateo"};
+    char nombres[][50]={"Maria","carlos","Jose","Carlos","Pablo","Mateo"};
     char sexo[]={'F','M','M','M','M','M'};
-    float sueldoBruto[]={1000,2000,3000,4000,5000,6000};
+    float sueldoBruto[]={30000,2000,3000,60000,10000,60000};
     for(i=0; i<tam; i++)
     {
         lista[i].legajo = legajos[i];
@@ -103,7 +99,7 @@ void hardcodearDatosEmpleados(eEmpleado lista[], int tam){
         lista[i].sueldoNeto=sueldoBruto[i] * 0.85;
         lista[i].estado=1;
     }
-}
+}*/
 
 void modificarEmpleado(eEmpleado lista[], int tam){
     int aux, i;
@@ -134,12 +130,62 @@ void modificarEmpleado(eEmpleado lista[], int tam){
 
 int menuModificacion(eEmpleado lista[], int tam, int aux){
     int opcion;
-    printf("Legajo: %d", lista[aux].legajo);
-    printf("\nNombre: %s", lista[aux].nombre);
-    printf("\nsexo: %c", lista[aux].sexo);
-    printf("\nSueldo neto: %.2f", lista[aux].sueldoBruto);
-    printf("\nSueldo bruto: %.2f\n\n", lista[aux].sueldoNeto);
+    mostrarEmpleado(lista,tam,aux);
     printf("\n\n1 - Modificar Nombre\n2 - Modificar sexo\n3 - Modificar sueldo bruto\n4 - Salir\n\nOpcion: ");
     scanf("%d", &opcion);
     return opcion;
+}
+int contarCarlos(eEmpleado lista[], int tam, char cadena[]){
+    int i, retorno=0;
+    for(i=0;i<tam;i++){
+        if(strcmpi(lista[i].nombre,cadena)==0 && lista[i].estado==1){
+            retorno++;
+        }
+    }
+    return retorno;
+}
+
+void mostrarEmpleadoPorNombre(eEmpleado lista[], int tam, char cadena[]){
+    int i;
+    for(i=0;i<tam;i++){
+        if(strcmpi(lista[i].nombre,cadena)==0){
+            mostrarEmpleado(lista, tam, i);
+        }
+    }
+}
+
+void buscarMayor(eEmpleado lista[], int tam, int min){
+    int i;
+    for(i=0;i<tam;i++){
+        if(lista[i].sueldoBruto>min && lista[i].estado==1){
+            mostrarEmpleado(lista,tam,i);
+        }
+    }
+}
+
+void mostrarEmpleado(eEmpleado lista[], int tam, int id){
+    printf("Legajo: %d", lista[id].legajo);
+    printf("\nNombre: %s", lista[id].nombre);
+    printf("\nsexo: %c", lista[id].sexo);
+    printf("\nSueldo bruto: %.2f", lista[id].sueldoBruto);
+    printf("\nSueldo neto: %.2f\n\n", lista[id].sueldoNeto);
+}
+
+void hardcodearDatosEmpleados(eEmpleado lista[], int tam){
+    int i;
+    int legajos[]={1,8,9,7,2,4};
+    char nombres[][50]={"Carlos","Maria","Carlos","Pedro","Carlos","Mateo"};
+    char sexo[]={'M','F','M','M','M','M'};
+    float sueldosBruto[]={22000,22000,15000,4000,21000,6000};
+
+    for(i=0; i<tam; i++)
+    {
+        lista[i].legajo = legajos[i];
+        strcpy(lista[i].nombre, nombres[i]);
+        lista[i].sexo = sexo[i];
+        lista[i].sueldoBruto = sueldosBruto[i];
+        lista[i].sueldoNeto = sueldosBruto[i] * 0.85;
+        lista[i].estado = 1;
+
+    }
 }

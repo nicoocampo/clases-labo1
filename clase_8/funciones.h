@@ -1,5 +1,5 @@
 #define MAX 20
-#define TAM 2
+#define TAM 6
 
 
 int pedirEntero(char mensaje[]);
