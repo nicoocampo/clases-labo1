@@ -4,7 +4,6 @@
 #include<ctype.h>
 #include "funciones.h"
 #include "empleados.h"
-#define MAX 20
 
 int pedirEntero(char mensaje[]){
     int entero;

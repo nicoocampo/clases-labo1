@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1555937705 source:c:\users\alumno\desktop\labo1\clase_8\empleados.c
+1556041368 source:c:\users\alumno\desktop\labo1\clase_8\empleados.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -7,11 +7,11 @@
 	"funciones.h"
 	"empleados.h"
 
-1555937232 c:\users\alumno\desktop\labo1\clase_8\funciones.h
+1556035764 c:\users\alumno\desktop\labo1\clase_8\funciones.h
 
-1555937232 c:\users\alumno\desktop\labo1\clase_8\empleados.h
+1556041368 c:\users\alumno\desktop\labo1\clase_8\empleados.h
 
-1555933595 source:c:\users\alumno\desktop\labo1\clase_8\funciones.c
+1556035772 source:c:\users\alumno\desktop\labo1\clase_8\funciones.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -19,7 +19,7 @@
 	"funciones.h"
 	"empleados.h"
 
-1555937427 source:c:\users\alumno\desktop\labo1\clase_8\main.c
+1556040492 source:c:\users\alumno\desktop\labo1\clase_8\main.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
