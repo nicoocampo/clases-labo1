@@ -9,4 +9,4 @@ void burbujeoString(char cadena[][20],int len);
 void swapBubbleInt(int enteros[], int i, int j);
 void swapBubbleChar(char caracteres[], int i, int j);
 void swapBubbleFloat(float flotantes[], int i, int j);
-void swapBubbleString(char cadena[], int i, int j);
+void swapBubbleString(char cadena[][20], int i, int j);

@@ -49,7 +49,7 @@ void swapBubbleFloat(float flotantes[], int i, int j){
     flotantes[j]=aux;
 }
 
-void swapBubbleString(char cadena[], int i, int j){
+void swapBubbleString(char cadena[][20], int i, int j){
     char auxCadena[100];
     strcpy(auxCadena,cadena[i]);
     strcpy(cadena[i],cadena[j]);

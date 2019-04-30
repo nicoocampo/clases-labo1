@@ -42,5 +42,5 @@ void pedirCadena(char mensaje[],char cadena[],int len);
  */
 char pedirSexo(char mensaje[]);
 
-void cadenaSoloLetras(char mensaje[], char cadena[], int len){
+void cadenaSoloLetras(char mensaje[], char cadena[], int len);
 

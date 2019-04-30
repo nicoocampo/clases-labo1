@@ -22,7 +22,7 @@ int pedirEntero(char mensaje[]){
         }
     }while(flag=1);
     retorno=atoi(str);
-    return entero;
+    return retorno;
 }
 
 /** \brief Pide que el usuario ingrese un flotante y lo valida
@@ -54,7 +54,7 @@ float pedirFlotante(char mensaje[]){
         }
     }while(flag=1);
     retorno=atof(str);
-    return entero;
+    return retorno;
 }
 
 /** \brief Pide que el usuario ingrese un caracter
@@ -67,7 +67,7 @@ char pedirCaracter(char mensaje[]){
     fflush(stdin);
     char caracter;
     printf("Ingrese %s: ", mensaje);
-    getc(caracter);
+    caracter=getc(stdin);
     return caracter;
 }
 
@@ -101,7 +101,7 @@ char pedirSexo(char mensaje[]){
     char caracter;
     do{
     printf("Ingrese %s: ", mensaje);
-    getc(caracter);
+    caracter=getc(stdin);
     tolower(caracter);
     }while(caracter!='m' || caracter!='f');
     return caracter;
@@ -109,7 +109,7 @@ char pedirSexo(char mensaje[]){
 
 void cadenaSoloLetras(char mensaje[], char cadena[], int len){
     char str[100];
-    int flag=1;
+    int i, flag=1;
     fflush(stdin);
     do{
         flag=1;
