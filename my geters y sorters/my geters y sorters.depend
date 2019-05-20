@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1558355124 source:c:\users\alumno\desktop\my geters y sorters\main.c
+	<stdio.h>
+	<stdlib.h>
+	"myGets.h"
+
+1558355381 source:c:\users\alumno\desktop\my geters y sorters\mygets.c
+	"myGets.h"
+
+1558354797 c:\users\alumno\desktop\my geters y sorters\mygets.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+

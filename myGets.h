@@ -9,7 +9,7 @@
  * \return El entero validado
  *
  */
-int pedirEntero(char mensaje[]);
+int pedirEntero(int* pNumero, char mensaje[]);
 
 /** \brief Pide que el usuario ingrese un flotante y lo valida
  *

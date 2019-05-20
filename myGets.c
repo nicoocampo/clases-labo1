@@ -3,25 +3,28 @@
 /** \brief Pide que el usuario ingrese un entero y lo valida
  *
  * \param mensaje[] mensaje a mostrar en pantalla al pedir el entero
- * \return El entero validado
+ * \return 1 si esta todo, -1 si el puntero es nulo
  *
  */
-int pedirEntero(char mensaje[]){
-    int retorno, flag=1, i;
+int pedirEntero(int* pNumero, char mensaje[]){
+    int retorno=-1, flag=1, i;
     char str[40];
-    do{
-        printf("%s: ", mensaje);
-        gets(str);
-        for(i=0;str[i]='\0';i++){
-            if(str[i]<'0' || str[i]>'9'){
-                flag=0;
-                break;
+    if(pNumero!=NULL){
+        do{
+            printf("%s: ", mensaje);
+            gets(str);
+            for(i=0;str[i]='\0';i++){
+                if(str[i]<'0' || str[i]>'9'){
+                    flag=0;
+                    break;
+                }
+                flag=1;
+                i++;
             }
-            flag=1;
-            i++;
-        }
-    }while(flag=1);
-    retorno=atoi(str);
+        }while(flag=1);
+        *pNumero=atoi(str);
+        retorno=1;
+    }
     return retorno;
 }
 
@@ -55,6 +58,7 @@ float pedirFlotante(char mensaje[]){
     }while(flag=1);
     retorno=atof(str);
     return retorno;
+
 }
 
 /** \brief Pide que el usuario ingrese un caracter
