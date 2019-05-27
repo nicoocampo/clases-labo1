@@ -1,5 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
+/*crear un empleado de forma dinamica
+una funcion se va a encargar de recibir un empleado y lo va a guardar en un archivo de forma binaria
+una funcion se va a encargar de leer y lo muestra desde la funcion*/
 
 FILE* abrirArchivo(char path[]);
 //LECTURA Y ESCRITURA DE UN ARCHIVO DE TIPO .txt
@@ -22,18 +25,14 @@ FILE* abrirArchivo(char path[]);
 int main(){
     FILE* pArch;
     int* number=(int*)malloc(sizeof(int)*3);
-    number[0]=45;
-    number[1]=8;
-    number[2]=99;
+    number[0]=45; number[1]=8; number[2]=99;
     pArch=fopen("DATA.dat","wb");
     fwrite(number,sizeof(int),3,pArch);
     fclose(pArch);
     fopen("DATA.dat","rb");
     fread(number,sizeof(int),3,pArch);
     fclose(pArch);
-    printf("%d\n", number[0]);
-    printf("%d\n", number[1]);
-    printf("%d\n", number[2]);
+    printf("%d\n%d\n%d\n", number[0], number[1], number[2]);
     return 0;
 }
 

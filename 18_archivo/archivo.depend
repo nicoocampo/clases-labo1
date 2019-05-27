@@ -1,5 +1,11 @@
 # depslib dependency file v1.0
-1558969806 source:c:\users\alumno\desktop\labo1\18_archivo\main.c
+1558970069 source:c:\users\alumno\desktop\labo1\18_archivo\main.c
 	<stdio.h>
 	<stdlib.h>
+
+1558962296 source:c:\users\alumno\desktop\labo1\18_archivo\empleado.c
+	"empleado.h"
+
+1558962235 c:\users\alumno\desktop\labo1\18_archivo\empleado.h
+	<stdio.h>
 
