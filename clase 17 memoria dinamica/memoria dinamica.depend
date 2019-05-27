@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1558962247 source:c:\users\alumno\desktop\memoria dinamica\empleado.c
+	"empleado.h"
+
+1558962235 c:\users\alumno\desktop\memoria dinamica\empleado.h
+	<stdio.h>
+
+1558962261 source:c:\users\alumno\desktop\memoria dinamica\main.c
+	<stdio.h>
+	<stdlib.h>
+	"empleado.h"
+
