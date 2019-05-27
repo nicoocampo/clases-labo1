@@ -21,15 +21,19 @@ FILE* abrirArchivo(char path[]);
 //LECTURA  ESCRITURA DE UN ARCHIVO DEL TIPO BINARIO .dat
 int main(){
     FILE* pArch;
-    int* number=(int*)malloc(sizeof(int));
-    *number=45;
+    int* number=(int*)malloc(sizeof(int)*3);
+    number[0]=45;
+    number[1]=8;
+    number[2]=99;
     pArch=fopen("DATA.dat","wb");
-    fwrite(number,sizeof(int),1,pArch);
+    fwrite(number,sizeof(int),3,pArch);
     fclose(pArch);
     fopen("DATA.dat","rb");
-    fread(number,sizeof(int),1,pArch);
+    fread(number,sizeof(int),3,pArch);
     fclose(pArch);
-    printf("%d", *number);
+    printf("%d\n", number[0]);
+    printf("%d\n", number[1]);
+    printf("%d\n", number[2]);
     return 0;
 }
 
